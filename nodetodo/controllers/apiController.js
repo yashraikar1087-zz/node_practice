@@ -17,6 +17,7 @@ module.exports = function(app) {
     );
   });
   app.get("/api/todo/:id", function(req, res) {
+    console.log(req.params.id);
     Todos.findById(
       {
         _id: req.params.id
